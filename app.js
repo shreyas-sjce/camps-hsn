@@ -15,7 +15,7 @@ var commentRoutes = require("./routes/comments");
 var campgroundRoutes = require("./routes/campgrounds");
 var indexRoutes = require("./routes/index");
 
-mongoose.connect("mongodb+srv://shreyas:Yashoda123%40@cluster0-qoqhh.mongodb.net/test?retryWrites=true&w=majority",{
+mongoose.connect/*("mongodb+srv://shreyas:Yashoda123%40@cluster0-qoqhh.mongodb.net/test?retryWrites=true&w=majority"*/("mongodb://shreyas:Yashoda123%40@my-atlas-cluster-shard-00-00-mdyjt.mongodb.net:27017,my-atlas-cluster-shard-00-01-mdyjt.mongodb.net:27017,my-atlas-cluster-shard-00-02-mdyjt.mongodb.net:27017/test?ssl=true&replicaSet=my-atlas-cluster-shard-0&authSource=admin&retryWrites=true&w=majority",{
 	useNewUrlParser: true,
 	useCreateIndex: true,
 	useUnifiedTopology: true
