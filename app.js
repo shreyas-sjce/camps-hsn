@@ -15,7 +15,7 @@ var commentRoutes = require("./routes/comments");
 var campgroundRoutes = require("./routes/campgrounds");
 var indexRoutes = require("./routes/index");
 
-mongoose.connect("mongodb+srv://shreyas:Yashoda123@@cluster0-qoqhh.mongodb.net/test?retryWrites=true&w=majority",{
+mongoose.connect("mongodb+srv://shreyas:Yashoda123%40@cluster0-qoqhh.mongodb.net/test?retryWrites=true&w=majority",{
 	useNewUrlParser: true,
 	useCreateIndex: true,
 	useUnifiedTopology: true
