@@ -1,0 +1,38 @@
+{
+  "name": "shreyas",
+  "version": "1.0.0",
+  "description": "Yelpcamp-v2",
+  "main": "app.js",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cloudinary": "^1.21.0",
+    "connect-flash": "^0.1.1",
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "express-sanitizer": "^1.0.5",
+    "express-session": "^1.17.0",
+    "method-override": "^3.0.0",
+    "mongoose": "^5.9.6",
+    "moment": "^2.24.0",
+    "multer": "^1.4.2",
+    "node-geocoder": "^3.27.0",
+    "passport-local": "^1.0.0",
+    "passport-local-mongoose": "^6.0.1",
+    "passport": "^0.4.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \\\"Error: no test specified\\\" && exit 1",
+	"start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/skyfall8694/camps-hsn.git"
+  },
+  "author": "Shreyas K",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/skyfall8694/camps-hsn/issues"
+  },
+  "homepage": "https://github.com/skyfall8694/camps-hsn#readme"
+}
