@@ -18,7 +18,8 @@ var campgroundRoutes = require("./routes/campgrounds");
 var indexRoutes = require("./routes/index");
 
 //process.env.DATABASEURL
-mongoose.connect('mongodb+srv:shreyas:Yashoda123@@cluster0-qoqhh.mongodb.net/<dbname>?retryWrites=true&w=majority',{
+//mongodb+srv:shreyas:Yashoda123@@cluster0-qoqhh.mongodb.net/<dbname>?retryWrites=true&w=majority
+mongoose.connect(('mongodb+srv://shreyas:Yashoda123@@cluster0-qoqhh.mongodb.net/<dbname>?retryWrites=true&w=majority'),{
 	useNewUrlParser: true,
 	useCreateIndex: true,
 	useUnifiedTopology: true
@@ -35,13 +36,13 @@ app.use(methodOverride("_method"));
 app.use(flash());
 
 //SeedDB();
-app.use(session({
-    cookie: { maxAge: 86400000 },
-    store: new MemoryStore({
-      checkPeriod: 86400000 // prune expired entries every 24h
-    }),
-    secret: 'keyboard cat'
-}));
+// app.use(session({
+//     cookie: { maxAge: 86400000 },
+//     store: new MemoryStore({
+//       checkPeriod: 86400000 // prune expired entries every 24h
+//     }),
+//     secret: 'keyboard cat'
+// }));
 
 app.use(require("express-session")({
 	secret: "godzilla",
