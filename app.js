@@ -16,7 +16,7 @@ var campgroundRoutes = require("./routes/campgrounds");
 var indexRoutes = require("./routes/index");
 
 //process.env.DATABASEURL
-mongoose.connect((process.env.DATABASEURL),{
+mongoose.connect('mongodb+srv:shreyas:Yashoda123@@cluster0-qoqhh.mongodb.net/<dbname>?retryWrites=true&w=majority',{
 	useNewUrlParser: true,
 	useCreateIndex: true,
 	useUnifiedTopology: true
