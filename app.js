@@ -10,6 +10,8 @@ var Campground = require("./models/campground");
 var Comment   = require("./models/comment");
 var User = require("./models/user");
 var SeedDB = require("./seeds");
+var session = require('express-session');
+var MemoryStore = require('memorystore')(session);
 
 var commentRoutes = require("./routes/comments");
 var campgroundRoutes = require("./routes/campgrounds");
@@ -54,6 +56,14 @@ app.use(function(req,res,next){
    res.locals.success = req.flash("success");
 	next();
 });
+
+app.use(session({
+    cookie: { maxAge: 86400000 },
+    store: new MemoryStore({
+      checkPeriod: 86400000 // prune expired entries every 24h
+    }),
+    secret: 'keyboard cat'
+}))
 
 
 /*Campground.create(
