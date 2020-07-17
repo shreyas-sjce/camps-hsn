@@ -49,26 +49,6 @@ body {
   flex-wrap: wrap;
 }
 
-
-
-
-/* .thumbnail img{
-	width: 100%;
+.checked {
+    color: orange;
 }
-
-.thumbnail {
-	padding: 0;
-}
-
-.thumbnail .caption-full {
-	padding: 9px;
-}
-
-#delete-form{
-	display: inline;
-}
-
-.flex-wrap {
-  display:flex;
-  flex-wrap: wrap;
-} */

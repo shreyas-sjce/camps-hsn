@@ -15,6 +15,7 @@ var MemoryStore = require('memorystore')(session);
 
 var commentRoutes = require("./routes/comments");
 var campgroundRoutes = require("./routes/campgrounds");
+var reviewRoutes     = require("./routes/reviews");
 var indexRoutes = require("./routes/index");
 
 //process.env.DATABASEURL
@@ -201,6 +202,7 @@ function isLoggedIn(req,res,next){
 app.use(indexRoutes);
 app.use(commentRoutes);
 app.use(campgroundRoutes);
+app.use(reviewRoutes);
 
 
 app.listen(process.env.PORT || 3000,function(){
