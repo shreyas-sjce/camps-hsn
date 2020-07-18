@@ -1,6 +1,7 @@
 var express = require("express");
 var router = express.Router();
 var Campground = require("../models/campground");
+var Comment = require("../models/comment");
 var Review = require("../models/review");
 var middleware = require("../middleware");
 var multer = require('multer');
@@ -126,8 +127,8 @@ router.post("/campgrounds/:id", middleware.checkCampgroundOwnership, function(re
 });
 
 
-router.delete("/campgrounds/:id", middleware.checkCampgroundOwnership, function (req, res) {
-    Campground.findById(req.params.id, function (err, campground) {
+router.get("/campgrounds/:id/delete", middleware.checkCampgroundOwnership, function (req, res) {
+    Campground.findByIdAndRemove(req.params.id, function (err, campground) {
         if (err) {
             res.redirect("/campgrounds");
         } else {
