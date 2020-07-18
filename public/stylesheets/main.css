@@ -32,12 +32,6 @@ body {
     padding: 9px;
 }
 
-/* Google Map styles */
-#map {
-	height: 400px;
-	width: 100%;
-}
-
 /* Campground show page delete button */
 #delete-form {
 	display: inline;
